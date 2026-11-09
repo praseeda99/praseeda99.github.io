@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B.V.S. Praseeda | I build real products with AI</title>
+<meta name="description" content="Praseeda turns ideas into working products by directing AI. Looking for AI engineering and product building roles.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #fbf8f1;
+    --ink: #1d1b16;
+    --muted: #686253;
+    --rule: #dcd5c5;
+    --accent: #0b5d4e;
+    --mark: #ffe27a;
+    --mark-ink: #1d1b16;
+    --serif: "Newsreader", Georgia, serif;
+    --sans: "IBM Plex Sans", system-ui, sans-serif;
+    --mono: "IBM Plex Mono", Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #16150f;
+      --ink: #f0ebdf;
+      --muted: #a59e8c;
+      --rule: #38352a;
+      --accent: #6fd3bd;
+      --mark: #f2cf5b;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.6 var(--sans); }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .page { max-width: 46rem; margin: 0 auto; padding: 0 1.25rem 4rem; }
+
+  header { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .25rem 1.5rem; padding: 1.5rem 0; font: 400 .875rem/1.5 var(--mono); }
+  header strong { font-weight: 500; }
+  nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+  h1 { font: 500 clamp(2.75rem, 9vw, 4.75rem)/1.04 var(--serif); letter-spacing: -.02em; margin: 2.5rem 0 1.25rem; }
+  h2 { font: 500 .8125rem/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 4rem 0 .5rem; padding-bottom: .5rem; border-bottom: 1px solid var(--rule); }
+  h3 { font: 500 1.625rem/1.2 var(--serif); margin: 2.25rem 0 .125rem; }
+  .meta { font: 400 .8125rem/1.5 var(--mono); color: var(--muted); margin: 0 0 .75rem; }
+
+  .fact { position: relative; margin: 0; padding: .35rem .5rem .35rem 2.75rem; border-radius: 2px; transition: background-color .25s; }
+  .fact.lead { font-size: 1.1875rem; }
+  .cite { position: absolute; left: 0; top: .55rem; font: 400 .75rem/1.5 var(--mono); color: var(--muted); }
+  .fact.hit { background: var(--mark); color: var(--mark-ink); }
+  .fact.hit a, .fact.hit .cite { color: var(--mark-ink); }
+
+  .ask { margin-top: 3rem; padding: 1.5rem 0 1.75rem; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); }
+  .ask h2 { all: unset; display: block; font: 500 1.75rem/1.2 var(--serif); }
+  .ask p { margin: .5rem 0 1rem; color: var(--muted); }
+  form { display: flex; gap: .5rem; }
+  input { flex: 1; min-width: 0; min-height: 48px; padding: 0 .75rem; font: inherit; color: inherit; background: transparent; border: 1px solid var(--muted); border-radius: 2px; }
+  button { font: inherit; cursor: pointer; border-radius: 2px; }
+  form button { min-height: 48px; padding: 0 1.25rem; background: var(--ink); color: var(--paper); border: 1px solid var(--ink); font-weight: 600; }
+  .chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .75rem; }
+  .chips button { min-height: 44px; padding: .25rem .75rem; font-size: .9375rem; background: transparent; color: var(--ink); border: 1px solid var(--rule); }
+  .chips button:hover { border-color: var(--ink); }
+
+  #answer:not(:empty) { margin-top: 1.25rem; }
+  #answer blockquote { margin: 0; font: 500 1.375rem/1.35 var(--serif); }
+  #answer mark { background: var(--mark); color: var(--mark-ink); padding: 0 .1em; }
+  #answer .source { margin: .625rem 0 0; font: 400 .875rem/1.5 var(--mono); color: var(--muted); }
+  .how { font: 400 .8125rem/1.5 var(--mono); margin: 1rem 0 0 !important; }
+
+  footer { margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--rule); font: 400 .875rem/1.5 var(--mono); color: var(--muted); }
+
+  @media (max-width: 30rem) {
+    .fact { padding-left: 2.25rem; }
+    form { flex-direction: column; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .fact { transition: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <strong>B.V.S. Praseeda</strong>
+    <nav aria-label="Links">
+      <a href="resume.pdf">Resume</a>
+      <a href="https://github.com/praseeda99">GitHub</a>
+      <a href="https://www.linkedin.com/in/praseeda-b-a39641309/">LinkedIn</a>
+      <a href="mailto:praseeda838@gmail.com">Email</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Hi, I'm Praseeda. I build real products with AI.</h1>
+    <p class="fact lead" data-src="Intro">I turn ideas into working products by directing AI, and I like making AI that shows its work so you can check the answer.</p>
+    <p class="fact lead" data-src="Intro">I'm looking for a job in AI engineering or real product building, internship or full-time.</p>
+
+    <section class="ask" aria-labelledby="ask-title">
+      <h2 id="ask-title">Don't take my word for it. Ask this page.</h2>
+      <p>Every answer is copied from this page, with a link to where it came from. If it isn't here, it won't guess.</p>
+      <form id="ask-form">
+        <label for="q" hidden>Your question</label>
+        <input id="q" autocomplete="off" placeholder="What was your part in the team project?">
+        <button>Ask</button>
+      </form>
+      <div class="chips">
+        <button type="button">Did AI write your code?</button>
+        <button type="button">What did you build at your internship?</button>
+        <button type="button">What was your part in the team project?</button>
+        <button type="button">How does FinSight check numbers?</button>
+        <button type="button">Do you have paying customers?</button>
+      </div>
+      <div id="answer" aria-live="polite"></div>
+      <p class="how">No LLM and no server, so it can't make anything up. It's BM25 keyword search in your browser. <a href="#how">How I build</a></p>
+    </section>
+
+    <h2>About me</h2>
+    <p class="fact lead" data-src="About me">I'm from Kakinada, Andhra Pradesh, and I'm in my final year of B.Tech Computer Science and Engineering at Amrita Vishwa Vidyapeetham, Coimbatore, graduating in 2027.</p>
+    <p class="fact lead" data-src="About me">I'm not trying to be a traditional software engineer. I care about what gets built and whether it works, and AI gets me from idea to working product fast.</p>
+    <p class="fact lead" data-src="About me">Money and markets pull me in. I finished Yale's Financial Markets course with honors on Coursera, and FinSight and FinShield both make finance easier to trust. <a href="https://coursera.org/verify/FBKCYRZXXD4K">Verify</a></p>
+    <p class="fact lead" data-src="About me">I use Figma a lot when I design, and I'm an active member of the National Service Scheme.</p>
+
+    <h2>Experience</h2>
+    <h3>Next Skills 360 EdTech</h3>
+    <p class="meta">AI/ML Engineering Intern · Apr to May 2026</p>
+    <p class="fact" data-src="Internship">At my internship I built a complete RAG chatbot that answers from textbook content, combining semantic retrieval with a fine-tuned LLaMA model.</p>
+    <p class="fact" data-src="Internship">I compared LoRA/PEFT, full fine-tuning and prompt-tuning on accuracy against compute cost, chose LoRA/PEFT and documented the evaluation.</p>
+    <p class="fact" data-src="Internship">I also trained a Sketch-RNN model on Google's Quick, Draw! data to generate hand-drawn-style doodles.</p>
+
+    <h2>Projects</h2>
+
+    <h3>FinSight</h3>
+    <p class="meta">Final-year project, in progress · <a href="https://github.com/praseeda-cse/finnn">Code</a></p>
+    <p class="fact" data-src="FinSight">FinSight answers questions about financial-report pages using open LLMs.</p>
+    <p class="fact" data-src="FinSight">The LLM never does the arithmetic. It writes the calculation, a safe Python executor runs it, and FinSight checks that every number appears on the page.</p>
+    <p class="fact" data-src="FinSight">Each answer comes back with its unit, its calculation and the source rows highlighted.</p>
+    <p class="fact" data-src="FinSight">I evaluate it with the official TAT-DQA scorer, and I've designed a user study to test whether seeing the evidence changes trust.</p>
+
+    <h3>FinShield</h3>
+    <p class="meta">Solo project · React, Express, MCP</p>
+    <p class="fact" data-src="FinShield">FinShield spots stale subscriptions and hidden bank fees, judges whether income is stable, and writes a step-by-step plan for a simulated money crisis.</p>
+    <p class="fact" data-src="FinShield">It runs as a web app with chat and a live dashboard, and as an MCP server with 14 tools that plugs into Claude Desktop.</p>
+    <p class="fact" data-src="FinShield">Nothing gets cancelled or flagged without approval. It runs on mock data for now.</p>
+
+    <h3>GreenCommute</h3>
+    <p class="meta">Team of 4 · <a href="https://github.com/praseeda99/Intelligent-Ride-Sharing-and-Sustainable-Mobility-Platform">Code</a></p>
+    <p class="fact" data-src="GreenCommute">GreenCommute is a ride-sharing platform built by a team of 4 with React, Node.js, Express and MongoDB.</p>
+    <p class="fact" data-src="GreenCommute">My part in the team project was the Privacy, Safety and Feedback module, on both backend and frontend: post-trip ratings, incident reports, support tickets, and privacy and emergency-contact settings.</p>
+    <p class="fact" data-src="GreenCommute">I also added admin screens for incidents and guidelines, plus Jest tests for the module.</p>
+
+    <h3>Game Zone</h3>
+    <p class="meta">Live · <a href="https://praseeda99.github.io/games/">Play it</a></p>
+    <p class="fact" data-src="Game Zone">Game Zone is a live game hub I made, with chess against a friend or the computer, Sudoku, Code Breaker and online two-player games.</p>
+
+    <h3>AXIOM</h3>
+    <p class="meta">Interactive physics · <a href="https://github.com/praseeda99/phyyyyy">Code</a></p>
+    <p class="fact" data-src="AXIOM">AXIOM is an interactive physics app in the browser: drag sliders to change black holes and warp drives, and watch the maths update live.</p>
+
+    <h2 id="how">How I build</h2>
+    <p class="fact lead" data-src="How I build">AI tools write my code. I decide what should exist and how it should work, then check the result by running it, testing it and benchmarking it.</p>
+
+    <h2>Also</h2>
+    <p class="fact" data-src="Hackathon">At Smart India Hackathon, our team was selected from many college teams and advanced to the next round with an attendance management system.</p>
+    <p class="fact" data-src="Coding">I've solved 403 problems on CodeChef and 132 on LeetCode.</p>
+  </main>
+
+  <footer>Want to talk? <a href="mailto:praseeda838@gmail.com">praseeda838@gmail.com</a></footer>
+</div>
+
+<script>
+  // Words that say nothing about the topic of a question.
+  const STOP = new Set("a an the is are was were am be do does did i you your my me we our of in on at to for from with and or it its this that what which who how why when where can could would should have has had about tell many much any".split(" "));
+  const SAME_WORD = { wrote: "write", written: "write", built: "build", made: "build", make: "build" };
+
+  const stem = word => {
+    const w = SAME_WORD[word] || word;
+    return w.length > 3 && w.endsWith("s") && !w.endsWith("ss") ? w.slice(0, -1) : w;
+  };
+  const tokens = text => (text.toLowerCase().match(/[a-z0-9]+/g) || []).filter(w => !STOP.has(w)).map(stem);
+
+  // Every passage comes from the page itself, so answers can only be things the page says.
+  const facts = [...document.querySelectorAll("[data-src]")].map((el, i) => {
+    const fact = { el, n: i + 1, label: el.dataset.src, text: el.textContent.trim(), words: tokens(el.textContent) };
+    el.id = "fact-" + fact.n;
+    const cite = document.createElement("span");
+    cite.className = "cite";
+    cite.textContent = "[" + fact.n + "]";
+    el.prepend(cite);
+    return fact;
+  });
+
+  const avgLength = facts.reduce((sum, f) => sum + f.words.length, 0) / facts.length;
+
+  function bm25(query, fact) {
+    const k1 = 1.5, b = 0.75;
+    return query.reduce((score, term) => {
+      const tf = fact.words.filter(w => w === term).length;
+      if (!tf) return score;
+      const df = facts.filter(f => f.words.includes(term)).length;
+      const idf = Math.log(1 + (facts.length - df + 0.5) / (df + 0.5));
+      return score + idf * (tf * (k1 + 1)) / (tf + k1 * (1 - b + b * fact.words.length / avgLength));
+    }, 0);
+  }
+
+  // More than half of the question's words must appear, otherwise there is no answer.
+  function search(question) {
+    const query = [...new Set(tokens(question))];
+    if (!query.length) return null;
+    const enough = fact => query.filter(t => fact.words.includes(t)).length > query.length / 2;
+    const best = facts.filter(enough).map(fact => ({ fact, score: bm25(query, fact) })).sort((a, b) => b.score - a.score)[0];
+    return best ? { fact: best.fact, query } : null;
+  }
+
+  const answer = document.getElementById("answer");
+
+  function quoteWithMarks(text, query) {
+    const quote = document.createElement("blockquote");
+    for (const part of text.split(/([A-Za-z0-9]+)/)) {
+      const hit = /^[A-Za-z0-9]+$/.test(part) && !STOP.has(part.toLowerCase()) && query.includes(stem(part.toLowerCase()));
+      const node = hit ? document.createElement("mark") : document.createTextNode(part);
+      if (hit) node.textContent = part;
+      quote.append(node);
+    }
+    return quote;
+  }
+
+  function ask(question) {
+    document.querySelectorAll(".hit").forEach(el => el.classList.remove("hit"));
+    answer.replaceChildren();
+    const result = search(question);
+    if (!result) {
+      const quote = document.createElement("blockquote");
+      quote.textContent = "That isn't on this page, so I won't guess.";
+      answer.append(quote);
+      return;
+    }
+    const { fact, query } = result;
+    fact.el.classList.add("hit");
+    const source = document.createElement("p");
+    source.className = "source";
+    const link = document.createElement("a");
+    link.href = "#fact-" + fact.n;
+    link.textContent = "See source [" + fact.n + "] on the page";
+    source.append(fact.label + " · ", link);
+    answer.append(quoteWithMarks(fact.text, query), source);
+  }
+
+  const input = document.getElementById("q");
+  document.getElementById("ask-form").addEventListener("submit", event => {
+    event.preventDefault();
+    ask(input.value);
+  });
+  document.querySelectorAll(".chips button").forEach(button => {
+    button.addEventListener("click", () => {
+      input.value = button.textContent;
+      ask(input.value);
+    });
+  });
+
+  // A link like ?ask=Did+AI+write+your+code opens with that answer showing.
+  const shared = new URLSearchParams(location.search).get("ask");
+  if (shared) {
+    input.value = shared;
+    ask(shared);
+  }
+</script>
+</body>
+</html>
